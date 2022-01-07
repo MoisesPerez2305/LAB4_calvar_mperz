@@ -11,6 +11,7 @@ import fifo_pkg::*;
 );
 
 
+
 logic [W_ADDR:0] rptr_r2w_1, rptr_r2w_2, wq2_rptr;
 logic [W_ADDR-1:0] ram_w_addr;
 
@@ -49,11 +50,11 @@ FIFO_write_Module write_control
 (
 	.wr_clk(wr_clk),
 	.wr_rst(wr_rst),
-	.push(push),
+	.push(itf.push), //<-----first bug was only push
 	.rptr(wq2_rptr),
 	.wptr(wptr_w2r_1),
 	.address(ram_w_addr),
-	.full(full)
+	.full(itf.full)//(full)
 );
 
 //sync w2r
@@ -74,7 +75,6 @@ FIFO_sync_module sync_w2r_2
 	.inp(wptr_w2r_2),
 	.out(rq2_wptr) 
 );
-
 FIFO_read_Module read_control
 (
 	.rd_clk(rd_clk),
@@ -83,20 +83,16 @@ FIFO_read_Module read_control
 	.wptr(rq2_wptr),
 	.rptr(rptr_r2w_1),
 	.address(ram_r_addr),
-	.empty(empty)
+	.empty(itf.empty)//(empty)
 );
 
-assign ram.we_a      = itf.full && itf.push;
-assign ram.rd_b      = itf.empty && itf.pop;
-assign ram.data_a    = (ram_w_addr == 5)?('hff):itf.data_in;
+assign ram.we_a      = ~itf.full && itf.push;
+assign ram.rd_b      = ~itf.empty && itf.pop;
+assign ram.data_a    = itf.data_in; //(ram_w_addr == 5)?('hff):itf.data_in;
 assign ram.wr_addr_a = ram_w_addr;
 assign ram.rd_addr_b = ram_r_addr;
-assign itf.data_out 	 = (ram_r_addr==4)? ('hbe):ram.rd_data_a;
+assign itf.data_out  = ram.rd_data_a;//(ram_r_addr==4)? ('hbe):ram.rd_data_a;
 endmodule
-
-
-
-
 
 `line 111 "fifo_top.sv" 2
 `line 1 "FIFO_gray_counter.sv" 1
@@ -191,8 +187,6 @@ endmodule
 `line 88 "FIFO_gray_counter.sv" 2
 `line 1 "FIFO_read_Module.sv" 1
 //FIFO read module
-
-
 module FIFO_read_Module
 import fifo_pkg::*;
 (
@@ -232,17 +226,12 @@ end
 
 endmodule
 
-
 `line 44 "FIFO_read_Module.sv" 2
 `line 1 "FIFO_sdp_dc_ram_if.sv" 1
 //Coder:          Abisai Ramirez Perez
 //Date:           03/31/2019
 //Name:           sp_dc_ ram_if.sv
 //Description:    This is the interface of a dual-port dual-clock random access memory. 
-
- 
-     
-
 interface FIFO_sdp_dc_ram_if ();
 import fifo_pkg::*;
 
@@ -276,16 +265,12 @@ output  rd_addr_b
 
 endinterface
 
-
-
 `line 44 "FIFO_sdp_dc_ram_if.sv" 2
 `line 1 "FIFO_sdp_dc_ram.sv" 1
 //Coder:          DSc Abisai Ramirez Perez
 //Date:           03/31/2019
 //Name:           sdp_dc_ram.sv
 //Description:    This is the HDL of a single dual-port dual-clock random access memory. 
-
-
 module FIFO_sdp_dc_ram 
 import fifo_pkg::*;
 (
@@ -318,7 +303,6 @@ endmodule
 `line 1 "FIFO_sync_module.sv" 1
 //Sync Module
 
-
 module FIFO_sync_module
 import fifo_pkg::*;
 (
@@ -341,12 +325,10 @@ end
 assign out = sync_r;
 
 endmodule 
-
 `line 27 "FIFO_sync_module.sv" 2
 
 `line 1 "FIFO_write_Module.sv" 1
 //Write Module
-
 
 module FIFO_write_Module
 import fifo_pkg::*;
@@ -386,6 +368,4 @@ always_ff@(posedge wr_clk or negedge wr_rst) begin
 end
 
 endmodule
-
-
 `line 44 "FIFO_write_Module.sv" 2

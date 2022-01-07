@@ -17,20 +17,20 @@ import fifo_pkg::*;
 
 fifo_if   itf();
 always_comb begin
-	itf.data_in = data_in;
-	itf.push    = {push};
+	//itf.data_in = data_in;
+	//itf.push    = {push};
 	full	    = itf.full;
-	data_out    = itf.data_out;
-	itf.pop     = {pop};
+	//data_out    = itf.data_out;
+	//itf.pop     = {pop};
 	empty	    = itf.empty;
 end
 
 
 fifo_top uut(
 	 .wr_clk(wrclk)
-	,.wr_rst(arst_n)
+	,.wr_rst(wr_rst) //fixed was arst_n
 	,.rd_clk(rdclk)
-	,.rd_rst(arst_n)
+	,.rd_rst(rd_rst)//fixed was arst_n
    ,.itf (itf)
 );
 

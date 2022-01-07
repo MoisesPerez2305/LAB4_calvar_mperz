@@ -1,0 +1,369 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Projects/Lab4_verify/tb
+Xfifo_class_svh_unit
+Z1 !s115 fifo_if
+Z2 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z3 DXx4 work 11 tb_fifo_pkg 0 22 AGPj?l>X>>e=0T>_MHM6>2
+Z4 !s110 1641596265
+VP3Fd1S8<KkTF6[Z[:o4]L2
+r1
+!s85 0
+!i10b 1
+!s100 _9Zm2oE0SSkkK59O31;2<1
+IP3Fd1S8<KkTF6[Z[:o4]L2
+!i103 1
+S1
+R0
+Z5 w1641497785
+8../dvt2/fifo_class.svh
+F../dvt2/fifo_class.svh
+!i122 0
+Z6 L0 1 0
+Z7 OV;L;2020.1;71
+31
+Z8 !s108 1641596264.000000
+!s107 ..\dvt2\fifo_class.svh|../src/fifo_wrapper.sv|../src/all_rtl_fifo.sv|../src/fifo_if.sv|../src/fifo_pkg.sv|../dvt2/fifo_class.svh|../dvt2/tb_fifo.sv|../dvt2/tb_fifo_pkg.sv|
+Z9 !s90 -reportprogress|300|-f|files.f|
+!i113 1
+Z10 tCvgOpt 0
+vFIFO_gray_counter
+R2
+Z11 DXx4 work 8 fifo_pkg 0 22 :7;?n=FX:<=kSPTj;DHOZ2
+R4
+!i10b 1
+!s100 EklR5GQYIOIFUPJBGUY9z0
+Z12 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I``>a3j?lB?8FP<Y^dGSb22
+Z13 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+Z14 w1641596265
+8FIFO_gray_counter.sv
+FFIFO_gray_counter.sv
+!i122 0
+L0 2 86
+R7
+r1
+!s85 0
+31
+R8
+Z15 !s107 ..\dvt2\fifo_class.svh|../src/fifo_wrapper.sv|../src/all_rtl_fifo.sv|../src/fifo_if.sv|../src/fifo_pkg.sv|../dvt2/fifo_class.svh|../dvt2/tb_fifo.sv|../dvt2/tb_fifo_pkg.sv|
+R9
+!i113 1
+R10
+n@f@i@f@o_gray_counter
+Yfifo_if
+R2
+R11
+R4
+!i10b 1
+!s100 4[U;n5=DRl[fAXEOE;IYe2
+R12
+IKUe>43@ePL@Zh]X]FWI1O1
+R13
+S1
+R0
+w1641595933
+8../src/fifo_if.sv
+F../src/fifo_if.sv
+!i122 0
+R6
+R7
+r1
+!s85 0
+31
+R8
+R15
+R9
+!i113 1
+R10
+Xfifo_pkg
+R2
+R4
+!i10b 1
+!s100 CYWmWz[8<R96UPmd?T>MW2
+R12
+I:7;?n=FX:<=kSPTj;DHOZ2
+V:7;?n=FX:<=kSPTj;DHOZ2
+S1
+R0
+w1639713925
+8../src/fifo_pkg.sv
+F../src/fifo_pkg.sv
+!i122 0
+Z16 L0 5 0
+R7
+r1
+!s85 0
+31
+R8
+R15
+R9
+!i113 1
+R10
+vFIFO_read_Module
+R2
+R11
+R4
+!i10b 1
+!s100 F0bD3;M7K43CmbM^INbG:2
+R12
+I^>[m7TWIXEOGM526h3EF30
+R13
+S1
+R0
+R14
+8FIFO_read_Module.sv
+FFIFO_read_Module.sv
+!i122 0
+L0 2 38
+R7
+r1
+!s85 0
+31
+R8
+R15
+R9
+!i113 1
+R10
+n@f@i@f@o_read_@module
+vFIFO_sdp_dc_ram
+R2
+R11
+R4
+!i10b 1
+!s100 ]iXj<YXVKJn4iBBD4SkJ^0
+R12
+I[dN54TM1[5j?^ZK4MZT>K1
+R13
+S1
+R0
+R14
+8FIFO_sdp_dc_ram.sv
+FFIFO_sdp_dc_ram.sv
+!i122 0
+L0 5 28
+R7
+r1
+!s85 0
+31
+R8
+R15
+R9
+!i113 1
+R10
+n@f@i@f@o_sdp_dc_ram
+YFIFO_sdp_dc_ram_if
+R2
+R11
+R4
+!i10b 1
+!s100 EPBG71GJVnGZYXUGObdI11
+R12
+IZjg5@ePk3X8]NfJb=HK[32
+R13
+S1
+R0
+R14
+8FIFO_sdp_dc_ram_if.sv
+FFIFO_sdp_dc_ram_if.sv
+!i122 0
+R16
+R7
+r1
+!s85 0
+31
+R8
+R15
+R9
+!i113 1
+R10
+n@f@i@f@o_sdp_dc_ram_if
+vFIFO_sync_module
+R2
+R11
+R4
+!i10b 1
+!s100 CB9g?`fd178VFR1[l=zAF3
+R12
+I0WMW4dBLIM9Y7iB50T=>z3
+R13
+S1
+R0
+R14
+8FIFO_sync_module.sv
+FFIFO_sync_module.sv
+!i122 0
+L0 3 22
+R7
+r1
+!s85 0
+31
+R8
+R15
+R9
+!i113 1
+R10
+n@f@i@f@o_sync_module
+vfifo_top
+R2
+R11
+R4
+!i10b 1
+!s100 mfCebm<UmFKhHX1<dSJFO1
+R12
+I[e>S4^QB@egblBm9Si_ZX2
+R13
+S1
+R0
+R14
+8fifo_top.sv
+Ffifo_top.sv
+!i122 0
+L0 2 93
+R7
+r1
+!s85 0
+31
+R8
+R15
+R9
+!i113 1
+R10
+vfifo_wrapper
+R2
+R11
+R4
+!i10b 1
+!s100 f:U<_dH9T=^;Jl0f82B4@3
+R12
+IUmBLF;JV?JbcbMlO6@]EN2
+R13
+S1
+R0
+w1641596218
+8../src/fifo_wrapper.sv
+F../src/fifo_wrapper.sv
+!i122 0
+L0 1 37
+R7
+r1
+!s85 0
+31
+R8
+R15
+R9
+!i113 1
+R10
+vFIFO_write_Module
+R2
+R11
+R4
+!i10b 1
+!s100 [^nN;:S2eVQ5bGW]OeK>n1
+R12
+I`a]_K5ENZ`[:63R@OiLlW0
+R13
+S1
+R0
+R14
+8FIFO_write_Module.sv
+FFIFO_write_Module.sv
+!i122 0
+L0 3 38
+R7
+r1
+!s85 0
+31
+R8
+R15
+R9
+!i113 1
+R10
+n@f@i@f@o_write_@module
+vtb_fifo
+R2
+R3
+DXx4 work 15 tb_fifo_sv_unit 0 22 ZDI@HAbV>ClBDdWS7A32?0
+R4
+R13
+r1
+!s85 0
+!i10b 1
+!s100 ;fELZ9?ziKGa<M8?e2XbM3
+IDgi3hS3l;;Bc_EOPiYzlo2
+!s105 tb_fifo_sv_unit
+S1
+R0
+w1641456300
+Z17 8../dvt2/tb_fifo.sv
+Z18 F../dvt2/tb_fifo.sv
+!i122 0
+L0 3 44
+R7
+31
+R8
+R15
+R9
+!i113 1
+R10
+Xtb_fifo_pkg
+R2
+R4
+!i10b 1
+!s100 bJOSU<WDSH:zfInC5UPNN3
+R12
+IAGPj?l>X>>e=0T>_MHM6>2
+VAGPj?l>X>>e=0T>_MHM6>2
+S1
+R0
+w1640046076
+8../dvt2/tb_fifo_pkg.sv
+F../dvt2/tb_fifo_pkg.sv
+!i122 0
+R16
+R7
+r1
+!s85 0
+31
+R8
+R15
+R9
+!i113 1
+R10
+Xtb_fifo_sv_unit
+R1
+R2
+R3
+R4
+VZDI@HAbV>ClBDdWS7A32?0
+r1
+!s85 0
+!i10b 1
+!s100 [VBJ][0O^E7UZ5z6I@Y1C2
+IZDI@HAbV>ClBDdWS7A32?0
+!i103 1
+S1
+R0
+R5
+R17
+R18
+F..\dvt2\fifo_class.svh
+!i122 0
+R6
+R7
+31
+R8
+R15
+R9
+!i113 1
+R10
