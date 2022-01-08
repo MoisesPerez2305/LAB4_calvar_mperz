@@ -38,10 +38,25 @@ import	tb_fifo_pkg::*;
 	#2 wr_rst_tb = 1; rd_rst_tb = 1;
 	
 	//fifo_obj.wke_up();
-	
-	repeat(16)begin
+	// Standard work
+	repeat(8)begin
 		#2	fifo_obj.push_action();
-		end
-	end
+		end	
+	
+	repeat(8) @(posedge rdclk_tb) fifo_obj.pop_action();
+	
+	//Overflow condition 
+	//repeat(20)begin
+	//	#2	fifo_obj.push_action();
+	//	end	
+	//Underflow condition
+	//repeat(5)begin
+	//	#2	fifo_obj.push_action();
+	//	end	
+	
+	//repeat(10) @(posedge rdclk_tb) fifo_obj.pop_action();
+	
+	end	
+
 endmodule:tb_fifo
 
